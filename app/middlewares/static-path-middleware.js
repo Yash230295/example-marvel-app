@@ -11,9 +11,7 @@ function staticPath(path) {
   if (DEV) {
     return path;
   }
-
-  // Manifest doesn't have leading slashes,
-  // remove for lookup and add back after
+  
   path = path.slice(1);
 
   var result = '/' + assetsManifest[path];

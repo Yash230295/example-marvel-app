@@ -1,5 +1,4 @@
 var t = require('tcomb');
-
 var ComicSummary = require('app/models/comic-summary');
 
 var ComicList = t.struct({

@@ -6,12 +6,10 @@ var enforceNodePath = require('enforce-node-path');
 enforceNodePath(path.join(__dirname, '..'));
 
 require('config/init/browser-refresh');
-
-var config = require('config/app');
 var app = require('app/app');
 
-app.listen(config.PORT, function () {
-  console.log('App listening on port ' + config.PORT);
+app.listen(3000, function () {
+  console.log('App listening on port ' + 3000);
 
   // Tell browser-refresh that server is ready to receive requests
   if (process.send) {

@@ -1,5 +1,4 @@
 var t = require('tcomb');
-
 var Url = require('app/models/url');
 var Image = require('app/models/image');
 var ComicList = require('app/models/comic-list');

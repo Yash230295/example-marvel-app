@@ -7,11 +7,6 @@
     >
   </div>
   <div class="media-body">
-    <p>
-      <a href=data.getMarvelUrl(data.character) target="_blank">
-        More details on Marvel.com
-      </a>
-    </p>
     <if (data.hasDescription(data.character))>
       <h4>Description</h4>
       <p>${data.character.description}</p>
@@ -21,12 +16,10 @@
       <ul>
         <for(comicSummary in data.getComics(data.character))>
           <li>
-            <a
-              href=('/comics/' + data.getComicId(comicSummary))
-              class='spf-link'
+            <ul ('/comics/' + data.getComicId(comicSummary))
             >
               ${comicSummary.name}
-            </a>
+            </ul>
           </li>
         </for>
       </ul>
