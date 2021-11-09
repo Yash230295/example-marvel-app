@@ -6,8 +6,7 @@ var characterTemplate = require('marko')
   .load(require.resolve('app/views/pages/character/template.marko'));
 var characterContentTemplate = require('marko')
   .load(require.resolve('app/views/pages/character/content.marko'));
-var notFoundTemplate = require('marko')
-  .load(require.resolve('app/views/pages/not-found/template.marko'));
+
 
 exports.index = function(req, res, next) {
   var marvel = req.marvel;
@@ -84,7 +83,7 @@ exports.show = function(req, res, next) {
   .catch(function(err) {
     if (err.status === 404) {
       res.status(404);
-      return notFoundTemplate.render({$global: req.templateGlobals}, res);
+      return "Not Found";
     }
 
     next(err);

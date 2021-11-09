@@ -13,7 +13,7 @@ var app = express();
 
 app.use(compression());
 app.use(express.static(path.join(__dirname, '../static')));
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'short' : 'dev'));
+app.use(morgan(process.env.NODE_ENV === 'dev'));
 
 app.use(marvel());
 app.use(staticPath);

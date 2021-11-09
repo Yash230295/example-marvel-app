@@ -1,12 +1,11 @@
 {
-  "name": "example-marvel-app",
+  "name": "Marvel-app",
   "version": "1.0.0",
-  "description": "Example Node.js app using the Marvel API",
+  "description": "Marvel API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run start:local",
-    "start:local": "source .env && NODE_PATH=. concurrently --kill-others --raw 'browser-refresh app/start'"
+    "start": "NODE_PATH=. concurrently --kill-others --raw 'browser-refresh app/start'"
   },
   "author": "",
   "devDependencies": {
@@ -20,7 +19,6 @@
     "browser-refresh-taglib": "1.0.4",
     "compression": "1.6.1",
     "css-brunch": "2.6.1",
-    "enforce-node-path": "1.0.0",
     "express": "4.13.4",
     "javascript-brunch": "2.0.0",
     "marko": "3.0.5",

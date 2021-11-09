@@ -1,5 +1,4 @@
-var homeTemplate = require('marko')
-  .load(require.resolve('app/views/pages/home/template.marko'));
+var homeTemplate = require('marko').load(require.resolve('app/views/pages/home/template.marko'));
 
 exports.index = function(req, res) {
 
