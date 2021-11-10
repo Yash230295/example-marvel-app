@@ -23,7 +23,7 @@ Marvel.prototype.findAllCharacters = function(options) {
     limit: limit,
     offset: offset
   });
-  var url = 'http://gateway.marvel.com/v1/public/characters?' + qs +apikey;
+  var url = 'http://gateway.marvel.com/v1/public/characters?' + qs ;
 
   return fetch(url)
     .then(function(res) {

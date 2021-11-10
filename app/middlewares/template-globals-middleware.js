@@ -3,6 +3,5 @@ module.exports = function(req, _res, next) {
     path: req.path,
     staticPath: req.staticPath
   };
-
   next();
 };

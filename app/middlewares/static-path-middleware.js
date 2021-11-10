@@ -1,20 +1,15 @@
 var path = require('path');
-
-var DEV = process.env.NODE_ENV !== 'production';
-
-var assetsManifest;
-if (!DEV) {
-  assetsManifest = require(path.join(__dirname, '../../assets.json'));
-}
+var localhost = process.env.NODE_ENV !== 'production';
+var assetsPath;
 
 function staticPath(path) {
-  if (DEV) {
+  if (localhost) {
     return path;
   }
   
   path = path.slice(1);
 
-  var result = '/' + assetsManifest[path];
+  var result = '/' + assetsPath[path];
   return result;
 }
 
